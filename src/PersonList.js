@@ -1,14 +1,26 @@
-import React, { Component } from 'react';
-import App from './App.js';
+import React from 'react'
 
-class PersonList extends Component{
+function PersonList({people}){
 
-  render(){
+const testArray=['joe','jim','bob']  
+
+ const listCreator = testArray.map(name =><li className='peopleNames' key={name}>{name}</li> )   
+ console.log(typeof people)
+ 
+
+ if(people.length<1){
+  var errorMessage= <li id='cow'>There are no names at this time</li>
+ }
+ 
   return(
     <>
+    <ul>
+      {errorMessage}
+      {listCreator}
+    </ul>
     </>
   )
-  }
+  
 }
 
 

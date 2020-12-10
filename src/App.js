@@ -4,9 +4,14 @@ import PersonList from './PersonList.js';
 import { Component } from 'react';
 
 class App extends Component {
-  state = {
-    people: []
+  constructor(props){
+    super(props)
+    this.state={
+      people: ['hi']
+    }
   }
+  
+  
   
   render() {
     return (

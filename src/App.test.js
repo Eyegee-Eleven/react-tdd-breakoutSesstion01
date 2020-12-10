@@ -53,6 +53,29 @@ describe('PersonList', () => {
     
   })
 
-  it('should render n list for the number of people')
+  // it('should render n list for the number of people',() =>{
+  //   // setup (from before each)
+  //   // exercise
+  //   //how many items in our people list?
+  //   //how many new itmes in 
+  //   //const personList = PersonListWrapper.props().people 
+  //   // </PersonList props={bob,jim,joe}>
+  //   // const nList = PersonListWrapper.find('li').map((node) => node.text())
+  //   // expect(personList).toEqual(nList)
+
+  //   const PersonListWrapperTest = shallow(<PersonList people={['joe', 'jim', 'bob']}/>)
+  //   const PersonListWrapperTestProps=PersonListWrapperTest.props()
+
+  //   //const TestBox='<ul><li className="peopleNames">joe</li><li className="peopleNames">jim</li><li className="peopleNames">bob</li></ul>'
+    
+  //   const nList = PersonListWrapperTest.find('.peopleNames').map((node) => node.text());
+  //   expect().toString()).toEqual(PersonListWrapperTestProps.children);
+  
+  // })
+            
+  it ('if people =empty => says (There are no people to list)', () =>{
+    const PersonListWrapper2 = shallow(<PersonList people = {[]}/>)
+    expect(PersonListWrapper2.find('#cow').some('#cow')).toEqual(true)
+  })
 
 })  
